@@ -1,0 +1,9 @@
+<div *ngIf="this.loginszerviz.token == ''">
+    <label for="email">E-mail: </label>
+    <input type="text" id="email" [(ngModel)]="email" />
+
+    <label for="password">Jelszó: </label>
+    <input type="password" id="password" [(ngModel)]="password" />
+
+    <input type="button" value="Belép" (click)="Belepes()" />
+</div>
