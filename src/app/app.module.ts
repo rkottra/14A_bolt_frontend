@@ -14,6 +14,14 @@ import {MatSortModule} from '@angular/material/sort';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+import { TermekComponent } from './termek/termek.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +30,8 @@ import { LogoutComponent } from './logout/logout.component';
     FooterComponent,
     TermekekComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    TermekComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,12 @@ import { LogoutComponent } from './logout/logout.component';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

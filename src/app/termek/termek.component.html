@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Termék szerkesztés</h1>
+<div mat-dialog-content>
+    <form>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Termék név:</mat-label>
+        <input matInput placeholder="Termék név" 
+            [(ngModel)]="termek.nev"
+            name="nev">
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Termék leírás:</mat-label>
+        <textarea matInput placeholder="bla, bla..." 
+            [(ngModel)]="termek.leiras"
+            name="leiras">
+        </textarea>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Termék ár:</mat-label>
+        <input matInput type="number" [(ngModel)]="termek.ar" 
+            name="ar"/>
+        <span matTextSuffix>.-Ft</span>
+    </mat-form-field>
+
+</form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Mégse</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Mentés</button>
+</div>
