@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { subscribeOn } from 'rxjs';
 
@@ -23,6 +23,13 @@ export class LoginService {
   }
 
   logout() {
+    const headers = new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization: 'Bearer '+this.token
+    });
+
+    this.http.post("http://localhost:8000/api/logout", {}, {headers}).subscribe();
+    
     this.token = "";
   }
 
